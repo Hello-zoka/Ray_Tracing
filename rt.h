@@ -1,4 +1,4 @@
-/* Zajcev Yurij, 11-1, group A, 25.11.2020 */
+/* Zajcev Yurij, 27.08.2021 */
 
 #ifndef __RT_H_
 #define __RT_H_
@@ -15,7 +15,7 @@
 const double EPS = 0.000001;
 
 namespace zyrt {
-    class shape {
+    class shape { // making class for our objects
     public:
         material mat;
 
@@ -46,7 +46,7 @@ namespace zyrt {
         std::vector<light_source *> lights;
         frame Shot;
 
-        rt() : Shot(1200, 600) {}
+        rt() : Shot(1400, 600) {}
 
         ~rt() {
             for (auto x : Scene)
@@ -54,12 +54,12 @@ namespace zyrt {
             Scene.clear();
         }
 
-        rt &operator<<(shape *NewShape) {
+        rt &operator<<(shape *NewShape) { // inserting objects into scene
             Scene.push_back(NewShape);
             return *this;
         }
 
-        rt &operator<<(light_source *source) {
+        rt &operator<<(light_source *source) { // inserting light sources into scene
             lights.push_back(source);
             return *this;
         }
@@ -71,7 +71,7 @@ namespace zyrt {
             return normal;
         }
 
-        std::pair<shape *, vec> intersect(const ray &r) {
+        std::pair<shape *, vec> intersect(const ray &r) { // intersecting ray with all objects on scene
             double intersection = 0;
             shape *closest = nullptr;
             vec point = vec(0, 0, 0);
@@ -87,7 +87,7 @@ namespace zyrt {
             return std::make_pair(closest, point);
         }
 
-        vec trace(const ray &r, const int depth) {
+        vec trace(const ray &r, const int depth) { // tracing ray into depth <= 5
             if (depth >= 5)
                 return vec(0, 0, 0);
             std::pair<shape *, vec> intersection = intersect(r);
@@ -96,55 +96,59 @@ namespace zyrt {
             return vec(0, 0, 0);
         }
 
-        vec shade(const ray &r, shape *object, const vec &point, int depth) {
+        vec shade(const ray &r, shape *object, const vec &point,
+                  int depth) { // counting  full shade including ambient, diffusing, specular and reflecting shades
             const vec dir = r.Dir;
             const vec normal = fontface(dir, object, point);
-            const vec reflected = (dir - normal * 2 * (normal & dir)).normalize();
+            const vec reflected = (dir - normal * 2 * (normal & dir)).normalize(); // counting reflected ray
             vec ambient = object->mat.amb;
-            vec reflection = (vec(0.2, 0.2, 0.2) | trace(ray(point + normal * EPS, reflected), depth + 1));
+            // 0.3 - measure of "brightness" of reflection shade
+            vec reflection = (vec(0.3, 0.3, 0.3) |
+                              trace(ray(point + normal * EPS, reflected), depth + 1)); // conting reflection shade
             vec diffuse = vec(0, 0, 0), specular = vec(0, 0, 0);
             for (auto light : lights) {
                 const vec destination = light->destination(point);
 
                 if (intersect(ray(point + destination * EPS, destination)).first == nullptr) {
                     if ((normal & destination) > 0)
-                        diffuse += (object->mat.dif | light->mat) * (normal & destination);
+                        diffuse += (object->mat.dif | light->mat) * (normal & destination); // counting diffusing shade
                     if ((reflected & destination) > 0)
                         specular += (object->mat.spec | light->mat) *
-                                    pow(reflected & destination, object->mat.phi);
+                                    pow(reflected & destination, object->mat.phi); // counting specular shade
                 }
             }
             return ambient + diffuse + specular + reflection;
         }
 
-        void Render() {
+        void Render() { // rendering scene using threads
             const int n = std::thread::hardware_concurrency();
             std::vector<std::thread> tasks;
-            const vec from(1, 0, 4);
-            const vec to(0, 0, 0);
+
+            const vec from(1, 0, 4); // location of camera
+            const vec to(0, 0, 0); // camera direction
             const double size = 0.1;
             const double wp = Shot.W > Shot.H ? size * Shot.W / Shot.H : size;
             const double hp = Shot.W > Shot.H ? size : size * Shot.H / Shot.W;
             const double pd = 2 * size, ws = Shot.W, hs = Shot.H;
-            vec up = vec(0, 1, 0).normalize();
+            vec up = vec(0, 1, 0).normalize(); // vector pointing up
             const vec dir = (to - from).normalize();
             const vec r = (dir % up).normalize();
             up = (r % dir).normalize();
 
             for (int y = 0; y < Shot.H; y++) {
-                tasks.push_back(std::thread([=]() {
+                tasks.push_back(std::thread([=]() { // inserting line into threads
                     for (int x = 0; x < Shot.W; x++) {
                         const vec p = dir * pd +
                                       r * ((x - ws / 2 + 0.5) * wp / ws) +
-                                      up * ((hs / 2 - y - 0.5) * hp / hs);
-                        const ray r(p + from, p);
-                        Shot.PutPixel(x, y, trace(r, 0).clamp());
+                                      up * ((hs / 2 - y - 0.5) * hp / hs); // getting current "pixel" position
+                        const ray cur_ray(p + from, p);
+                        Shot.PutPixel(x, y, trace(cur_ray, 0).clamp()); // putting pixel with correct color
                     }
                 }));
             }
-            for (auto &tsk : tasks)
+            for (auto &tsk : tasks) // making all operations we had already put in threads
                 tsk.join();
-            Shot.Draw();
+            Shot.Draw(); // Drawing our scene
         }
     };
 

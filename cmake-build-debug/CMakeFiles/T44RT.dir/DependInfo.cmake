@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/yurij/Documents/zoka/Прога/T44RT/Ray_tracing_main.cpp" "/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o"
-  "/Users/yurij/Documents/zoka/Прога/T44RT/materials.cpp" "/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles/T44RT.dir/materials.cpp.o"
+  "/Users/yurij/Documents/Ray_Tracing/Ray_tracing_main.cpp" "/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o"
+  "/Users/yurij/Documents/Ray_Tracing/materials.cpp" "/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles/T44RT.dir/materials.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

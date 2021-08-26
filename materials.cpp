@@ -1,6 +1,9 @@
+/* Zajcev Yurij, 27.08.2021 */
+
 #include "materials.h"
 
 namespace zyrt{
+    //you can find here a little base of materials in format name, vec of ambient, vec of diffuse, vec of specular, phi
     material MtlLib[20] =
             {
                     /* 00 */ material("Black Plastic", vec(0.0, 0.0, 0.0),             vec(0.01, 0.01, 0.01),           vec(0.5, 0.5, 0.5),               32),

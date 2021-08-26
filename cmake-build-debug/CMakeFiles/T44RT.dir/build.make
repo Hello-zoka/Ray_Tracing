@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/yurij/Documents/zoka/Прога/T44RT
+CMAKE_SOURCE_DIR = /Users/yurij/Documents/Ray_Tracing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/yurij/Documents/Ray_Tracing/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/T44RT.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/T44RT.dir/flags.make
 
 CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o: CMakeFiles/T44RT.dir/flags.make
 CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o: ../Ray_tracing_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o -c /Users/yurij/Documents/zoka/Прога/T44RT/Ray_tracing_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o -c /Users/yurij/Documents/Ray_Tracing/Ray_tracing_main.cpp
 
 CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yurij/Documents/zoka/Прога/T44RT/Ray_tracing_main.cpp > CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yurij/Documents/Ray_Tracing/Ray_tracing_main.cpp > CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.i
 
 CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yurij/Documents/zoka/Прога/T44RT/Ray_tracing_main.cpp -o CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yurij/Documents/Ray_Tracing/Ray_tracing_main.cpp -o CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.s
 
 CMakeFiles/T44RT.dir/materials.cpp.o: CMakeFiles/T44RT.dir/flags.make
 CMakeFiles/T44RT.dir/materials.cpp.o: ../materials.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/T44RT.dir/materials.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/T44RT.dir/materials.cpp.o -c /Users/yurij/Documents/zoka/Прога/T44RT/materials.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/T44RT.dir/materials.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/T44RT.dir/materials.cpp.o -c /Users/yurij/Documents/Ray_Tracing/materials.cpp
 
 CMakeFiles/T44RT.dir/materials.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/T44RT.dir/materials.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yurij/Documents/zoka/Прога/T44RT/materials.cpp > CMakeFiles/T44RT.dir/materials.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yurij/Documents/Ray_Tracing/materials.cpp > CMakeFiles/T44RT.dir/materials.cpp.i
 
 CMakeFiles/T44RT.dir/materials.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/T44RT.dir/materials.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yurij/Documents/zoka/Прога/T44RT/materials.cpp -o CMakeFiles/T44RT.dir/materials.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yurij/Documents/Ray_Tracing/materials.cpp -o CMakeFiles/T44RT.dir/materials.cpp.s
 
 # Object files for target T44RT
 T44RT_OBJECTS = \
@@ -115,7 +115,7 @@ T44RT: CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o
 T44RT: CMakeFiles/T44RT.dir/materials.cpp.o
 T44RT: CMakeFiles/T44RT.dir/build.make
 T44RT: CMakeFiles/T44RT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable T44RT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable T44RT"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/T44RT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/T44RT.dir/clean:
 .PHONY : CMakeFiles/T44RT.dir/clean
 
 CMakeFiles/T44RT.dir/depend:
-	cd /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/yurij/Documents/zoka/Прога/T44RT /Users/yurij/Documents/zoka/Прога/T44RT /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles/T44RT.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/yurij/Documents/Ray_Tracing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/yurij/Documents/Ray_Tracing /Users/yurij/Documents/Ray_Tracing /Users/yurij/Documents/Ray_Tracing/cmake-build-debug /Users/yurij/Documents/Ray_Tracing/cmake-build-debug /Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles/T44RT.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/T44RT.dir/depend
 

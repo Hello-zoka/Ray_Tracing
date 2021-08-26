@@ -1,4 +1,5 @@
-/* Zajcev Yurij, 11-1, 23.12.2020 */
+/* Zajcev Yurij, 27.08.2021 */
+
 #ifndef __POINT_SOURCE_H_
 #define __POINT_SOURCE_H_
 
@@ -8,12 +9,12 @@
 #include "vec.h"
 
 namespace zyrt {
-    class point_source : public light_source {
+    class point_source : public light_source { // point light sources
     private:
         vec position;
     public:
-        point_source(vec p, vec h) : position(p) {
-            mat = h;
+        point_source(vec p) : position(p) {
+            mat = vec(1, 1, 1);
         }
 
         virtual vec destination(const vec &point) override {

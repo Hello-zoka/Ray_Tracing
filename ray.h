@@ -1,13 +1,13 @@
-/* Zajcev Yurij, 11-1, group A, 25.11.2020 */
+/* Zajcev Yurij, 27.08.2021 */
 
 #ifndef __RAY_H_
 #define __RAY_H_
 
 #include "vec.h"
 
-class ray {
+class ray { // class for ray
 public:
-    vec Org, Dir;
+    vec Org, Dir; // radius-vector of end-point of ray, vector of direction
 
     ray() {}
 
@@ -17,7 +17,7 @@ public:
         Dir = D;
     }
 
-    vec operator()(dbl t) const {
+    vec operator()(dbl t) const { // getting point in distance t from begin of ray
         return Org + Dir * t;
     }
 };

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/yurij/Documents/zoka/Прога/T44RT
+# Install script for directory: /Users/yurij/Documents/Ray_Tracing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,4 +1,4 @@
-/* Zajcev Yurij, 11-1, group A, 25.11.2020 */
+/* Zajcev Yurij, 27.08.2021 */
 
 #ifndef __WIN_H_
 #define __WIN_H_
@@ -11,32 +11,31 @@
 namespace zyrt {
     class win {
     private:
-        static void Display() {
-            //frame frm(100, 100);
-            glClearColor(0.30, 0.50, 0.70, 1.00);
+        static void Display() { // standard glut display function
+            glClearColor(0.30, 0.50, 0.70, 1.00); // calm color of background
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-            MainScene.Render();
+            MainScene.Render(); // Rendering scene
             glFinish();
             glutSwapBuffers();
             glutPostRedisplay();
         }
 
         static void Keyboard(unsigned char Key, int X, int Y) {
-            if (Key == 27)
+            if (Key == 27) // if you push escape button program will close
                 exit(0);
-            else if (Key == 'f')
+            else if (Key == 'f') // 'f' button open full screen mode
                 glutFullScreen();
         }
 
     public:
-        win() {
+        win() { // standard glut function which create glut window
             const char *argv[] = {"ops"};
             int argc = 1;
             glutInit(&argc, const_cast<char **>(argv));
             glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
             glutInitWindowPosition(0, 0);
-            glutInitWindowSize(5000, 5000);
-            glutCreateWindow("RT");
+            glutInitWindowSize(5000, 5000); // size of glut window
+            glutCreateWindow("RT"); // name of glut window
             glutDisplayFunc(Display);
             glutKeyboardFunc(Keyboard);
         }

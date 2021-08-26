@@ -64,10 +64,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/yurij/Documents/zoka/Прога/T44RT
+CMAKE_SOURCE_DIR = /Users/yurij/Documents/Ray_Tracing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/yurij/Documents/Ray_Tracing/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/T44RT.dir/clean
 CMakeFiles/T44RT.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/T44RT.dir/build.make CMakeFiles/T44RT.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/T44RT.dir/build.make CMakeFiles/T44RT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target T44RT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target T44RT"
 .PHONY : CMakeFiles/T44RT.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/T44RT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/T44RT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yurij/Documents/zoka/Прога/T44RT/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yurij/Documents/Ray_Tracing/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/T44RT.dir/rule
 
 # Convenience name for target.
