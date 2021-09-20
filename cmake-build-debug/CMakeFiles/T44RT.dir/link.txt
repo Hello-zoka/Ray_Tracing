@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/g++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/T44RT.dir/Ray_tracing_main.cpp.o CMakeFiles/T44RT.dir/materials.cpp.o  -o T44RT  -framework OpenGL -framework OpenGL -framework GLUT -framework Cocoa 

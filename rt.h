@@ -124,7 +124,7 @@ namespace zyrt {
             const int n = std::thread::hardware_concurrency();
             std::vector<std::thread> tasks;
 
-            const vec from(1, 0, 4); // location of camera
+            const vec from(0, 0, 8); // location of camera
             const vec to(0, 0, 0); // camera direction
             const double size = 0.1;
             const double wp = Shot.W > Shot.H ? size * Shot.W / Shot.H : size;
