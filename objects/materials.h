@@ -3,7 +3,7 @@
 #ifndef _MATERIALS_H_
 #define _MATERIALS_H_
 
-#include "vec.h"
+#include "../math_classes/vec.h"
 
 namespace zyrt {
     class material { // class which contains information about material of object

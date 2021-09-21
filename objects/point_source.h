@@ -5,8 +5,8 @@
 
 #include <cmath>
 #include <iostream>
-#include "rt.h"
-#include "vec.h"
+#include "../tracing/tracing.h"
+#include "../math_classes/vec.h"
 
 namespace zyrt {
     class point_source : public light_source { // point light sources

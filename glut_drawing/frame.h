@@ -5,7 +5,7 @@
 
 #include <GLUT/glut.h>
 #include <cstring>
-#include "vec.h"
+#include "../math_classes/vec.h"
 
 typedef unsigned char byte;
 

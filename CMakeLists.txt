@@ -34,4 +34,4 @@ endif ()
 add_compile_options("-Wno-deprecated-declarations")
 add_compile_options("--std=c++11")
 
-add_executable(T44RT Ray_tracing_main.cpp point_source.h materials.cpp)
+add_executable(T44RT Ray_tracing_main.cpp objects/point_source.h objects/materials.cpp)
